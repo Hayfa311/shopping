@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة الطعام - مطعم أجاودينا</title>
+    <link rel="stylesheet" href="test.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav id="navbar">
+        <div class="container">
+                <h1 class="logo">🍴 أجاودينا</h1>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="menu.html" class="active">قائمة الطعام</a></li>
+                <li><a href="offers.html">العروض</a></li>
+                <li><a href="delivery.html">التوصيل</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li>
+                    <a href="#cart" id="cartLink">
+                        السلة <span id="cartCount">(0)</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- محتوى الصفحة الرئيسية -->
+    <main class="menu-page">
+        <section class="menu-section">
+            <div class="container">
+                <!-- أدوات التحكم -->
+                <div class="controls">
+                    <div class="search-filter">
+                        <div class="search-box">
+                            <input type="text" id="searchInput" placeholder="ابحث عن طبقك المفضل...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <select id="sortSelect">
+                                <option value="default">الترتيب الافتراضي</option>
+                                <option value="price-asc">السعر: من الأقل للأعلى</option>
+                                <option value="price-desc">السعر: من الأعلى للأقل</option>
+                                <option value="rating">الأعلى تقييمًا</option>
+                            </select>
+                            
+                            <div class="category-filter">
+                                <button class="active" data-category="all">الكل</button>
+                                <button data-category="main">أطباق رئيسية</button>
+                                <button data-category="appetizers">مقبلات</button>
+                                <button data-category="drinks">مشروبات</button>
+                                <button data-category="desserts">حلويات</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- قائمة الأطباق -->
+                <div class="menu-grid" id="menuGrid">
+                    <!-- سيتم تعبئتها بالJavaScript -->
+                </div>
+                <!-- الأطباق المقترحة -->
+                <div class="recommendations">
+                    <h2 class="section-title">قد يعجبك أيضًا</h2>
+                    <div class="recommendations-grid" id="recommendationsGrid">
+                        <!-- سيتم تعبئتها بالJavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- السلة الجانبية -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>سلة المشتريات</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <!-- سيتم تعبئتها بالJavaScript -->
+        </div>
+        
+        <div class="cart-footer">
+            <div class="total-price">
+                الإجمالي: <span id="cartTotal">0</span> ر.س
+            </div>
+            <button class="checkout-btn" onclick="handleCheckout()">
+                إتمام الطلب <i class="fas fa-shopping-bag"></i>
+            </button>
+        </div>
+    </div>
+
+</div>
+      <!-- إشعارات النظام -->
+    <div id="notification" class="notification"></div>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+
+                <p>تابعنا على وسائل التواصل الاجتماعي</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p class="copyright">&copy; 2025 مطعم أجاودينا. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="test.js"></script>
+</body>
+</html>
